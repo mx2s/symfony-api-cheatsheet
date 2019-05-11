@@ -17,4 +17,20 @@ class BaseRoutingController
             'success' => true
         ]);
     }
+
+    /**
+     * @param int $param1
+     * @return JsonResponse
+     */
+    public function route1(int $param1): JsonResponse
+    {
+        return new JsonResponse([
+            'success' => true,
+            'data' => [
+                'url_params' => [
+                    'param1' => $param1
+                ]
+            ]
+        ]);
+    }
 }
