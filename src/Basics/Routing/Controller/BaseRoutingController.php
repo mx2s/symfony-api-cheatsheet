@@ -5,6 +5,7 @@ namespace App\Basics\Routing\Controller;
 
 
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Request;
 
 class BaseRoutingController
 {
@@ -30,6 +31,19 @@ class BaseRoutingController
                 'url_params' => [
                     'param1' => $param1
                 ]
+            ]
+        ]);
+    }
+
+    /**
+     * @param Request $request
+     * @return JsonResponse
+     */
+    public function route2(Request $request): JsonResponse {
+        return new JsonResponse([
+            'success' => true,
+            'data' => [
+                'request_params' => $request->query->all()
             ]
         ]);
     }

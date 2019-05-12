@@ -2,6 +2,7 @@ index:
     path: /
     controller: App\Basics\Routing\Controller\BaseRoutingController::index
 
-route1:
-    path: /route1/{param1}
-    controller: App\Basics\Routing\Controller\BaseRoutingController::route1
+basic_routing_routes:
+    resource: '@BasicsRoutingBundle/Resources/config/routing.yml'
+
+
