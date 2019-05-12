@@ -13,3 +13,5 @@
 ###< symfony/web-server-bundle ###
 
 \.idea/
+
+bin/\.web-server-pid
