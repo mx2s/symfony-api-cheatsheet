@@ -4,6 +4,7 @@
 namespace App\Basics\Routing\Controller;
 
 
+use App\Basics\Routing\Entity\Person;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -45,6 +46,32 @@ class BaseRoutingController
             'data' => [
                 'request_params' => $request->query->all()
             ]
+        ]);
+    }
+
+    /**
+     * @param Request $request
+     * @return JsonResponse
+     */
+    public function route3(Request $request): JsonResponse
+    {
+        $person = new Person();
+        $person->email = $request->query->get('email');
+        $person->name = $request->query->get('name');
+
+        $errors = $person->validate();
+
+        if (count($errors) > 0) {
+            return new JsonResponse([
+                'errors' => $errors
+            ], 422);
+        }
+
+        return new JsonResponse([
+            'data' => [
+                'person' => $person
+            ],
+            'errors' => $errors
         ]);
     }
 }
