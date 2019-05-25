@@ -113,4 +113,8 @@ class Person
 
         return $result;
     }
+
+    public function transform() {
+
+    }
 }

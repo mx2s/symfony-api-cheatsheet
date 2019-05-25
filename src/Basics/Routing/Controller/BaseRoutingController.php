@@ -5,6 +5,7 @@ namespace App\Basics\Routing\Controller;
 
 
 use App\Basics\ORMBundle\Entity\Person;
+use App\Basics\ORMBundle\Transformer\PersonTransformer;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -72,9 +73,12 @@ class BaseRoutingController extends AbstractController
         $entityManager->persist($person);
         $entityManager->flush();
 
+        $transformer = new PersonTransformer();
+
         return new JsonResponse([
             'data' => [
+                'person' => $transformer->transform($person)
             ]
-        ]);
+        ], 201);
     }
 }
