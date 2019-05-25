@@ -73,11 +73,9 @@ class BaseRoutingController extends AbstractController
         $entityManager->persist($person);
         $entityManager->flush();
 
-        $transformer = new PersonTransformer();
-
         return new JsonResponse([
             'data' => [
-                'person' => $transformer->transform($person)
+                'person' => PersonTransformer::transformItem($person)
             ]
         ], 201);
     }

@@ -16,4 +16,9 @@ class PersonTransformer extends TransformerAbstract
             'name' => $person->getName()
         ];
     }
+
+    public static function transformItem(Person $person) {
+        $transformer = new self();
+        return $transformer->transform($person);
+    }
 }
