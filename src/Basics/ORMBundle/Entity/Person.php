@@ -71,50 +71,14 @@ class Person
         return $this->name;
     }
 
+    /**
+     * @param string|null $name
+     * @return Person
+     */
     public function setName(?string $name): self
     {
         $this->name = $name;
 
         return $this;
-    }
-
-    /**
-     * @param ClassMetadata $metadata
-     */
-    public static function loadValidatorMetadata(ClassMetadata $metadata)
-    {
-        $metadata->addPropertyConstraint('name', new Assert\NotBlank());
-        $metadata->addPropertyConstraints('email', [
-            new Assert\Email([
-                'message' => 'The email {{ value }} is not a valid email.'
-            ]),
-            new Assert\NotBlank()
-        ]);
-    }
-
-    /**
-     * @return array
-     */
-    public function validate() {
-        $result = [];
-
-        $validator = Validation::createValidatorBuilder()
-            ->addMethodMapping('loadValidatorMetadata')
-            ->getValidator();
-
-        $errors = $validator->validate($this);
-
-        foreach ($errors as $error) {
-            $result[] = [
-                'property' => $error->getPropertyPath(),
-                'message' => $error->getMessage()
-            ];
-        }
-
-        return $result;
-    }
-
-    public function transform() {
-
     }
 }

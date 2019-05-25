@@ -10,6 +10,11 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 
+/**
+ * Simple routing + creating entity example
+ * Class BaseRoutingController
+ * @package App\Basics\Routing\Controller
+ */
 class BaseRoutingController extends AbstractController
 {
     /**
@@ -49,35 +54,5 @@ class BaseRoutingController extends AbstractController
                 'request_params' => $request->query->all()
             ]
         ]);
-    }
-
-    /**
-     * @param Request $request
-     * @return JsonResponse
-     */
-    public function route3(Request $request): JsonResponse
-    {
-        $entityManager = $this->getDoctrine()->getManager();
-
-        $person = new Person();
-        $person->setEmail($request->query->get('email'));
-        $person->setName($request->query->get('name'));
-
-        $errors = $person->validate();
-
-        if (count($errors) > 0) {
-            return new JsonResponse([
-                'errors' => $errors
-            ], 422);
-        }
-
-        $entityManager->persist($person);
-        $entityManager->flush();
-
-        return new JsonResponse([
-            'data' => [
-                'person' => PersonTransformer::transformItem($person)
-            ]
-        ], 201);
     }
 }

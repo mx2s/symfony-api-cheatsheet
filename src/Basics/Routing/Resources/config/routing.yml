@@ -5,7 +5,3 @@ route1:
 route2:
     path: /route2
     controller: App\Basics\Routing\Controller\BaseRoutingController::route2
-
-route3:
-    path: /route3
-    controller: App\Basics\Routing\Controller\BaseRoutingController::route3
