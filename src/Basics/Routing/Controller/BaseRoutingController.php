@@ -4,11 +4,12 @@
 namespace App\Basics\Routing\Controller;
 
 
-use App\Basics\Routing\Entity\Person;
+use App\Basics\ORMBundle\Entity\Person;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 
-class BaseRoutingController
+class BaseRoutingController extends AbstractController
 {
     /**
      * @return JsonResponse
@@ -55,9 +56,10 @@ class BaseRoutingController
      */
     public function route3(Request $request): JsonResponse
     {
+        $entityManager = $this->getDoctrine()->getManager();
         $person = new Person();
-        $person->email = $request->query->get('email');
-        $person->name = $request->query->get('name');
+        $person->setEmail($request->query->get('email'));
+        $person->setName($request->query->get('name'));
 
         $errors = $person->validate();
 
@@ -67,11 +69,12 @@ class BaseRoutingController
             ], 422);
         }
 
+        $entityManager->persist($person);
+        $entityManager->flush();
+
         return new JsonResponse([
             'data' => [
-                'person' => $person
-            ],
-            'errors' => $errors
+            ]
         ]);
     }
 }
