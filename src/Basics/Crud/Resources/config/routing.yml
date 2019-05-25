@@ -1,0 +1,4 @@
+get:
+    path: /api/v1/person/{id}
+    controller: App\Basics\Crud\Controller\PersonCrudController::get
+

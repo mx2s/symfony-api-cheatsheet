@@ -10,5 +10,6 @@ return [
     App\Basics\Routing\BasicsRoutingBundle::class => ['all' => true],
     App\Basics\Console\BasicsConsoleBundle::class => ['all' => true],
     App\Basics\ORMBundle\BasicsORMBundle::class => ['all' => true],
+    App\Basics\Crud\BasicsCrudBundle::class => ['all' => true],
     SamJ\FractalBundle\SamJFractalBundle::class => ['all' => true]
 ];

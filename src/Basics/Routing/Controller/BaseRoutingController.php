@@ -58,6 +58,7 @@ class BaseRoutingController extends AbstractController
     public function route3(Request $request): JsonResponse
     {
         $entityManager = $this->getDoctrine()->getManager();
+
         $person = new Person();
         $person->setEmail($request->query->get('email'));
         $person->setName($request->query->get('name'));

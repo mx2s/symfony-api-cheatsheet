@@ -5,4 +5,7 @@ index:
 basic_routing_routes:
     resource: '@BasicsRoutingBundle/Resources/config/routing.yml'
 
+basic_crud_routes:
+    resource: '@BasicsCrudBundle/Resources/config/routing.yml'
+
 

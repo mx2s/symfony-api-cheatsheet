@@ -9,6 +9,10 @@ use League\Fractal\TransformerAbstract;
 
 class PersonTransformer extends TransformerAbstract
 {
+    /**
+     * @param Person $person
+     * @return array
+     */
     public function transform(Person $person) {
         return [
             'id' => $person->getId(),
@@ -17,6 +21,10 @@ class PersonTransformer extends TransformerAbstract
         ];
     }
 
+    /**
+     * @param Person $person
+     * @return array
+     */
     public static function transformItem(Person $person) {
         $transformer = new self();
         return $transformer->transform($person);
