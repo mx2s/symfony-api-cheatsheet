@@ -20,4 +20,4 @@ Thanks for considering contributing to this repo! Any refactoring / improvements
 
 ### Docs
 for now docs available only as postman collections:
-1. [Basics](link)
+1. [Basics](https://raw.githubusercontent.com/mxss/symfony-api-cheatsheet/master/resources/docs/postman/Basics.postman_collection.json)
