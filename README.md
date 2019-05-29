@@ -12,6 +12,12 @@ Thanks for considering contributing to this repo! Any refactoring / improvements
 - [ ] Swagger Docs
 - [ ] ...
 
+## Set up
+1. run `composer install`
+2. create file .env.dev.local and add dbstring `DATABASE_URL=pgsql://dbuser:dbpass@127.0.0.1:5432/dbname`
+3. start server by running `php bin/console server:start`
+4. go to `localhost:8000` to see the result!
+
 ### Docs
 for now docs available only as postman collections:
 1. [Basics](link)
