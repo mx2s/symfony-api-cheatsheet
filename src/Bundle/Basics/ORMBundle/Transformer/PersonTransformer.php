@@ -1,10 +1,10 @@
 <?php
 
 
-namespace App\Basics\ORMBundle\Transformer;
+namespace App\Bundle\Basics\ORMBundle\Transformer;
 
 
-use App\Basics\ORMBundle\Entity\Person;
+use App\Bundle\Basics\ORMBundle\Entity\Person;
 use League\Fractal\TransformerAbstract;
 
 class PersonTransformer extends TransformerAbstract

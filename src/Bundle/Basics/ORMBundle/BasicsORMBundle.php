@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Basics\ORMBundle;
+namespace App\Bundle\Basics\ORMBundle;
 
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;

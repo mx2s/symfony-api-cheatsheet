@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Basics\Crud\Request;
+namespace App\Bundle\Basics\Crud\Request;
 
 
 use App\Request\BaseValidatedRequest;

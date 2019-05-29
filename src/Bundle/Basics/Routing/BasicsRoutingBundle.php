@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Basics\Routing;
+namespace App\Bundle\Basics\Routing;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

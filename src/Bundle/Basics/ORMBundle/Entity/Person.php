@@ -1,12 +1,8 @@
 <?php
 
 
-namespace App\Basics\ORMBundle\Entity;
+namespace App\Bundle\Basics\ORMBundle\Entity;
 
-
-use Symfony\Component\Validator\Constraints as Assert;
-use Symfony\Component\Validator\Mapping\ClassMetadata;
-use Symfony\Component\Validator\Validation;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -14,7 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @package App\Basics\Routing\Entity
  *
  * @ORM\Table(name="persons")
- * @ORM\Entity(repositoryClass="App\Basics\ORMBundle\Repository\PersonRepository")
+ * @ORM\Entity(repositoryClass="App\Bundle\Basics\ORMBundle\Repository\PersonRepository")
  */
 
 class Person

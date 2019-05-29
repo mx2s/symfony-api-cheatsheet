@@ -1,11 +1,8 @@
 <?php
 
 
-namespace App\Basics\Routing\Controller;
+namespace App\Bundle\Basics\Routing\Controller;
 
-
-use App\Basics\ORMBundle\Entity\Person;
-use App\Basics\ORMBundle\Transformer\PersonTransformer;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;

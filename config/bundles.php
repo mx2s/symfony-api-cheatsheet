@@ -7,9 +7,9 @@ return [
     Doctrine\Bundle\DoctrineBundle\DoctrineBundle::class => ['all' => true],
     Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle::class => ['all' => true],
     Symfony\Bundle\MakerBundle\MakerBundle::class => ['dev' => true],
-    App\Basics\Routing\BasicsRoutingBundle::class => ['all' => true],
-    App\Basics\Console\BasicsConsoleBundle::class => ['all' => true],
-    App\Basics\ORMBundle\BasicsORMBundle::class => ['all' => true],
-    App\Basics\Crud\BasicsCrudBundle::class => ['all' => true],
+    App\Bundle\Basics\Routing\BasicsRoutingBundle::class => ['all' => true],
+    App\Bundle\Basics\Console\BasicsConsoleBundle::class => ['all' => true],
+    App\Bundle\Basics\ORMBundle\BasicsORMBundle::class => ['all' => true],
+    App\Bundle\Basics\Crud\BasicsCrudBundle::class => ['all' => true],
     SamJ\FractalBundle\SamJFractalBundle::class => ['all' => true]
 ];

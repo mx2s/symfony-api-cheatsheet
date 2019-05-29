@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Basics\Crud;
+namespace App\Bundle\Basics\Crud;
 
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
