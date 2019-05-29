@@ -125,6 +125,6 @@ class PersonCrudController extends AbstractController
         $entityManager->remove($person);
         $entityManager->flush();
 
-        return new JsonResponse([]);
+        return new JsonResponse(null);
     }
 }
