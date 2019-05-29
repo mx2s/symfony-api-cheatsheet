@@ -1,0 +1,182 @@
+{
+	"info": {
+		"_postman_id": "749daa45-8e7b-419d-ac5a-1a068d9afeff",
+		"name": "Basics",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "routing",
+			"item": [
+				{
+					"name": "route 3",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8000/route3?email=someemail@gmail.com&name=test name",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"route3"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "someemail@gmail.com"
+								},
+								{
+									"key": "name",
+									"value": "test name"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "crud",
+			"item": [
+				{
+					"name": "/api/v1/person",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8000/api/v1/person?name=John Brown&email=testemail@rt.de",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"person"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "John Brown"
+								},
+								{
+									"key": "email",
+									"value": "testemail@rt.de"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/v1/person/{id}",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8000/api/v1/person/2?email=testemail@bk.de&name=John Doe",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"person",
+								"2"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "testemail@bk.de"
+								},
+								{
+									"key": "name",
+									"value": "John Doe"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/v1/person/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8000/api/v1/person/33",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"person",
+								"33"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/v1/person/{id}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8000/api/v1/person/32",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"person",
+								"32"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
