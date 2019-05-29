@@ -9,4 +9,9 @@ Thanks for considering contributing to this repo! Any refactoring / improvements
 - [x] Object validation
 - [ ] Research: model binding
 - [ ] Model Relations
+- [ ] Swagger Docs
 - [ ] ...
+
+### Docs
+for now docs available only as postman collections:
+1. [Basics](link)
