@@ -1,6 +1,6 @@
 index:
     path: /
-    controller: App\Basics\Routing\Controller\BaseRoutingController::index
+    controller: App\Bundle\Basics\Routing\Controller\BaseRoutingController::index
 
 basic_routing_routes:
     resource: '@BasicsRoutingBundle/Resources/config/routing.yml'
