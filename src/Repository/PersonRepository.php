@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Bundle\Basics\ORMBundle\Repository;
+namespace App\Repository;
 
-use App\Bundle\Basics\ORMBundle\Entity\Person;
+use App\Entity\Person;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\ORM\NonUniqueResultException;
 use Symfony\Bridge\Doctrine\RegistryInterface;

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Transformers;
+namespace App\Transformer;
 
 
 use Symfony\Component\Validator\ConstraintViolationListInterface;

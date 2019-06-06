@@ -5,9 +5,9 @@ namespace App\Bundle\Basics\Crud\Controller;
 
 use App\Bundle\Basics\Crud\Request\CreatePersonRequest;
 use App\Bundle\Basics\Crud\Request\UpdatePersonRequest;
-use App\Bundle\Basics\ORMBundle\Entity\Person;
-use App\Bundle\Basics\ORMBundle\Transformer\PersonTransformer;
-use App\Transformers\ValidationErrorsTransformer;
+use App\Entity\Person;
+use App\Transformer\PersonTransformer;
+use App\Transformer\ValidationErrorsTransformer;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;

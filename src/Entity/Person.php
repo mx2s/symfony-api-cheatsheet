@@ -1,7 +1,6 @@
 <?php
 
-
-namespace App\Bundle\Basics\ORMBundle\Entity;
+namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -10,7 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @package App\Basics\Routing\Entity
  *
  * @ORM\Table(name="persons")
- * @ORM\Entity(repositoryClass="App\Bundle\Basics\ORMBundle\Repository\PersonRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\PersonRepository")
  */
 
 class Person

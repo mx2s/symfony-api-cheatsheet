@@ -1,7 +1,7 @@
 route1:
     path: /route1/{param1}
-    controller: App\Basics\Routing\Controller\BaseRoutingController::route1
+    controller: App\Bundle\Basics\Routing\Controller\BaseRoutingController::route1
 
 route2:
     path: /route2
-    controller: App\Basics\Routing\Controller\BaseRoutingController::route2
+    controller: App\Bundle\Basics\Routing\Controller\BaseRoutingController::route2
