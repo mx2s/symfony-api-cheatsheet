@@ -60,4 +60,32 @@ class ArticleCrudController extends AbstractController
             ]
         ], 201);
     }
+
+    /**
+     * @param int $id
+     * @return object|JsonResponse
+     */
+    public function get($id) {
+        $entityManager = $this->getDoctrine()->getManager();
+
+        $article = $entityManager->getRepository(Article::class)->find($id);
+
+        if (!$article) {
+            return new JsonResponse([
+                "errors" => [
+                    "message" => "Article not found"
+                ]
+            ], 404);
+        }
+
+        return new JsonResponse([
+            'data' => [
+                'article' => ArticleTransformer::transformItem($article)
+            ]
+        ]);
+    }
+
+    // TODO: implement UPDATE
+
+    // TODO: implement DELETE
 }

@@ -26,3 +26,8 @@ create_article:
     path: /api/v1/article
     methods: [POST]
     controller: App\Bundle\Basics\Crud\Controller\ArticleCrudController::create
+
+get_article:
+    path: /api/v1/article/{id}
+    methods: [GET]
+    controller: App\Bundle\Basics\Crud\Controller\ArticleCrudController::get
