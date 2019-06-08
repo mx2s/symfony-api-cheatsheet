@@ -7,17 +7,20 @@ use App\Request\BaseValidatedRequest;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\Validator\Mapping\ClassMetadata;
-use Doctrine\ORM\Mapping as ORM;
 
+/**
+ * Class UpdatePersonRequest
+ * @package App\Bundle\Basics\Crud\Request
+ */
 class UpdatePersonRequest extends BaseValidatedRequest
 {
     /**
-     * @ORM\Column(type="string", length=255)
+     * @var string
      */
     public $email;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @var string
      */
     public $name;
 

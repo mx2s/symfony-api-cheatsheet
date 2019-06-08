@@ -1,20 +1,28 @@
-create:
+# Person CRUD
+
+create_person:
     path: /api/v1/person
     methods: [POST]
     controller: App\Bundle\Basics\Crud\Controller\PersonCrudController::create
 
-get:
+get_person:
     path: /api/v1/person/{id}
     methods: [GET]
     controller: App\Bundle\Basics\Crud\Controller\PersonCrudController::get
 
-update:
+update_person:
     path: /api/v1/person/{id}
     methods: [PATCH]
     controller: App\Bundle\Basics\Crud\Controller\PersonCrudController::update
 
-delete:
+delete_person:
     path: /api/v1/person/{id}
     methods: [DELETE]
     controller: App\Bundle\Basics\Crud\Controller\PersonCrudController::delete
 
+# Article CRUD
+
+create_article:
+    path: /api/v1/article
+    methods: [POST]
+    controller: App\Bundle\Basics\Crud\Controller\ArticleCrudController::create
